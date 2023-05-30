@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
+    <!--meta data for star display-->
     <meta charset="utf-8" />
     <meta name="description" content="Star display" />
     <meta name="keywords" content="immaculata, ics2o" />
     <meta name="author" content="Everett" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="number" sizes="180x180" href="https://cdn.shopify.com/s/files/1/0194/3447/products/10.png?v=1588839929" />
-    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.shopify.com/s/files/1/0194/3447/products/10.png?v=1588839929" />
-    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.shopify.com/s/files/1/0194/3447/products/10.png?v=1588839929" />
+    
+    <!--star favicon for galaxy look-->
+    <link rel="number" sizes="180x180" href="./img/pointystar.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/pointystar.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/pointystar.png" />
     <link rel="manifest" href="./fav_index/site.webmanifest" />
+    
+    <!--mdl style sheet and linking css file-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -25,11 +31,13 @@
         </div>
       </header>
       <main class="mdl-layout__content">
+        
+        <!--title for star display with galaxy image-->
         <center>
-         <h1>Galaxy Creator with loops</h1>
+         <h1>Galaxy Creator With For And While Loops</h1>
         <img src="./img/galaxy.jpg" alt="Galaxy-photo" width="500" height="333">
           
-        <!-- Simple Textfield -->
+        <!-- Simple Textfield for user input star base-->
         <form action="#">
           <p>How many stars would you like for the base?:</p>
           <div class="mdl-textfield mdl-js-textfield">
@@ -43,7 +51,7 @@
           </div>
         </form>
           
-          <!-- Simple Textfield -->
+          <!-- Simple Textfield for user input star height-->
         <form action="#">
           <p>How many stars would you like for the height?:</p>
           <div class="mdl-textfield mdl-js-textfield">
@@ -57,7 +65,7 @@
           </div>
         </form>
 
-        <!-- Simple Textfield -->
+        <!-- Simple Textfield for user input planet base -->
         <form action="#">
           <p>How many planets would you like for the base?:</p>
           <div class="mdl-textfield mdl-js-textfield">
@@ -71,7 +79,7 @@
           </div>
         </form>
           
-        <!-- Simple Textfield -->
+        <!-- Simple Textfield for user input planet height -->
         <form action="#">
           <p>How many planets would you like for the height?:</p>
           <div class="mdl-textfield mdl-js-textfield">
@@ -84,8 +92,22 @@
             <span class="mdl-textfield__error">Input is not valid</span>
           </div>
         </form>
+
+           <!-- Simple Textfield for user input comet base -->
+        <form action="#">
+          <p>How many comets would you like?:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input 
+              class="mdl-textfield__input"
+              type="number"
+              id="comet"
+            />
+            <label class="mdl-textfield__label" for="S-base">Star base</label>
+            <span class="mdl-textfield__error">Input is not valid</span>
+          </div>
+        </form>
           
-        <!-- Raised button with ripple -->
+        <!-- Raised button with ripple connected to js file, to display planet, star and comet user inputs. -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="calculate()"
@@ -94,8 +116,11 @@
         </button>
         <br />
         <p>
+          
+          <!-- id for js -->
             <div id="display-stars"></div>
             <div id="display-planets"></div>
+            <div id="display-comet"></div>
           </center>
           </div>
         </p>
